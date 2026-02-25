@@ -1,0 +1,1587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Marketing Agency Pro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+:root {
+  --bg-dark: #000000;
+  --bg-panel: #0a0a0a;
+  --bg-accent: #b3001b; /* cherry red */
+  --text-main: #ffffff;
+  --text-muted: #d4d4d4;
+  --border-soft: #262626;
+  --radius: 14px;
+  --transition: 0.7s ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-main);
+}
+
+.page {
+  padding: 24px 20px 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.page {
+  padding: 24px 20px 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.page {
+  padding: 24px 20px 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* NAV */
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #000;
+  padding: 14px 20px;
+  border-radius: 999px;
+  border: 1px solid #1f1f1f;
+  position: sticky;
+  top: 12px;
+  z-index: 10;
+}
+
+.nav-left {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.nav-center {
+  display: flex;
+  gap: 24px;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+}
+
+.nav-right button {
+  background: var(--bg-accent);
+  color: #fff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 40px;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.hero-left {
+  text-transform: uppercase;
+}
+
+.hero-title {
+  font-size: 46px;
+  line-height: 1.05;
+  letter-spacing: 0.08em;
+  margin-bottom: 24px;
+}
+
+.hero-sub {
+  background: #050505;
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  text-transform: none;
+  margin-bottom: 16px;
+}
+
+.hero-button {
+  background: var(--bg-accent);
+  color: #ffffff;
+  border: none;
+  padding: 12px 26px;
+  border-radius: 999px;
+  font-size: 14px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.hero-right {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image {
+  width: 360px;
+  height: 420px;
+  border-radius: 24px;
+  background: url('image2.jpg') center/cover no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* SERVICES */
+
+.wix-banner {
+  margin-top: 60px;
+  background: #111111;
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--border-soft);
+}
+
+.services {
+  margin-top: 30px;
+  background: #050505;
+  border-radius: var(--radius);
+  padding: 26px 22px 24px;
+  border: 1px solid var(--border-soft);
+}
+
+.services-title {
+  font-size: 22px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.service-card {
+  background: #000000;
+  border-radius: var(--radius);
+  padding: 18px 16px 16px;
+  border: 1px solid var(--border-soft);
+  font-size: 13px;
+}
+
+.service-card h3 {
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.service-card p {
+  color: var(--text-muted);
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.service-card a {
+  font-size: 11px;
+  color: var(--bg-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+/* BLUEPRINT */
+
+.blueprint {
+  margin-top: 60px;
+  background: #050505;
+  border-radius: var(--radius);
+  padding: 26px 22px;
+  border: 1px solid var(--border-soft);
+}
+
+.blueprint h2 {
+  font-size: 20px;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.blueprint p {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+/* CASE STUDIES */
+
+.case-header {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.case-header-kicker {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.case-header-title {
+  font-size: 18px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.case-images {
+  margin-top: 26px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.case-img {
+  width: 100%;
+  height: 260px;
+  border-radius: var(--radius);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/* CASE STUDY CARDS */
+
+.case-cards {
+  margin-top: 60px;
+  margin-bottom: 0;
+  background: #050505;
+  border-radius: var(--radius);
+  padding: 26px 22px 24px;
+  border: 1px solid var(--border-soft);
+}
+
+/* CONSULTATION */
+
+.consultation {
+  margin-top: 40px;
+}
+
+.consultation-header h2 {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+.consultation-header p {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+.consultation-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.consult-card {
+  background: linear-gradient(145deg, #111111, #0a0a0a);
+  border-radius: 22px;
+  padding: 22px 20px;
+  border: 1px solid #2a2a2a;
+  transition: 0.4s ease;
+}
+
+.consult-card:hover {
+  border-color: var(--bg-accent);
+  transform: translateY(-6px);
+}
+
+.consult-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.consult-card h3 {
+  font-size: 18px;
+}
+
+.price {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.consult-card p {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.consult-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.consult-buttons .primary {
+  background: var(--bg-accent);
+  color: #fff;
+  border: none;
+  padding: 9px 16px;
+  border-radius: 999px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.consult-buttons .secondary {
+  background: #1a1a1a;
+  color: #fff;
+  border: 1px solid #2a2a2a;
+  padding: 9px 16px;
+  border-radius: 999px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.case-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.case-card {
+  background: #000000;
+  border-radius: var(--radius);
+  padding: 16px 14px 14px;
+  border: 1px solid var(--border-soft);
+  font-size: 13px;
+}
+
+.case-card h3 {
+  font-size: 14px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.case-card p {
+  color: var(--text-muted);
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.case-card button {
+  background: var(--bg-accent);
+  color: #ffffff;
+  border: none;
+  padding: 7px 12px;
+  border-radius: 999px;
+  font-size: 11px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.case-cta {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.case-cta-title {
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.case-cta button {
+  background: var(--bg-accent);
+  color: #ffffff;
+  border: none;
+  padding: 9px 20px;
+  border-radius: 999px;
+  font-size: 12px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+/* TESTIMONIALS */
+
+/* TESTIMONIALS */
+
+.testimonials {
+  margin-top: 70px;
+}
+
+.testimonial-block {
+  background: linear-gradient(145deg, #7a0013, #4a000c);
+  border-radius: 22px;
+  padding: 22px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ffffff;
+  margin-bottom: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+/* CONTACT */
+
+.contact {
+  margin-top: 60px;
+  background: #050505;
+  border-radius: var(--radius);
+  padding: 26px 22px;
+  border: 1px solid var(--border-soft);
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.contact h2 {
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.contact p {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.contact-form {
+  display: grid;
+  gap: 12px;
+  font-size: 13px;
+}
+
+.field-group {
+  display: grid;
+  gap: 4px;
+}
+
+.field-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+label {
+  font-size: 12px;
+}
+
+input,
+select,
+textarea {
+  background: #000000;
+  border-radius: 8px;
+  border: 1px solid var(--border-soft);
+  padding: 8px 9px;
+  color: var(--text-main);
+  font-size: 13px;
+  font-family: inherit;
+}
+
+textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.contact button {
+  background: var(--bg-accent);
+  color: #ffffff;
+  border: none;
+  padding: 9px 20px;
+  border-radius: 999px;
+  font-size: 12px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.contact-side {
+  text-align: right;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--bg-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  line-height: 1.6;
+}
+
+/* MARQUEE */
+
+.marquee {
+  margin-top: 0;
+  background: var(--bg-accent);
+  color: #ffffff;
+  padding: 10px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+}
+
+.marquee-inner {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 14s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+/* FOOTER */
+
+.footer {
+  margin-top: 20px;
+  padding-top: 26px;
+  border-top: 1px solid var(--border-soft);
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 32px;
+  margin-bottom: 18px;
+}
+
+.footer-logo {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: var(--text-main);
+}
+
+.footer-heading {
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  color: var(--text-main);
+}
+
+.footer-contact p {
+  margin-bottom: 4px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.social-pill {
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  border: 1px solid var(--border-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  color: var(--text-main);
+}
+
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border-soft);
+  margin-top: 10px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 16px;
+  font-size: 12px;
+}
+
+.footer-links a {
+  color: var(--text-muted);
+}
+
+/* ANIMATIONS */
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: var(--transition);
+}
+
+.slide-right {
+  opacity: 0;
+  transform: translateX(80px);
+  transition: var(--transition);
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: var(--transition);
+}
+
+.visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* GUIDE SECTION */
+
+.guide {
+  margin-top: 60px;
+}
+
+.guide-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 28px;
+}
+
+.guide-top h2 {
+  font-size: 26px;
+  margin-bottom: 6px;
+}
+
+.guide-top p {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.guide-preview {
+  background: #1a1a1a;
+  color: #fff;
+  border: 1px solid var(--border-soft);
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.guide-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 24px;
+}
+
+.guide-card {
+  background: linear-gradient(145deg, #111111, #0a0a0a);
+  border-radius: 22px;
+  padding: 24px;
+  border: 1px solid var(--border-soft);
+}
+
+.guide-card h3 {
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.guide-card ul {
+  margin-left: 18px;
+  margin-bottom: 20px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  font-size: 13px;
+}
+
+.guide-card hr {
+  border: none;
+  border-top: 1px solid var(--border-soft);
+  margin: 16px 0;
+}
+
+.guide-price-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.price {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.guide-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.guide-buttons .primary {
+  background: var(--bg-accent);
+  color: #fff;
+  border: none;
+  padding: 9px 16px;
+  border-radius: 999px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.guide-buttons .secondary {
+  background: #1a1a1a;
+  color: #fff;
+  border: 1px solid var(--border-soft);
+  padding: 9px 16px;
+  border-radius: 999px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.guide-buttons .ghost {
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid var(--border-soft);
+  padding: 9px 16px;
+  border-radius: 999px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.guide-tip {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.muted {
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.small {
+  font-size: 12px;
+}
+
+
+/* ABOUT SECTION */
+
+.about {
+  margin-top: 70px;
+}
+
+.about-header h2 {
+  font-size: 26px;
+  margin-bottom: 6px;
+}
+
+.about-header p {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 28px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.about-card {
+  background: linear-gradient(145deg, #111111, #0a0a0a);
+  border-radius: 22px;
+  padding: 24px;
+  border: 1px solid var(--border-soft);
+}
+
+.about-card h3 {
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.about-card p {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+.about-card ul {
+  margin-left: 18px;
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.about-tags {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+.about-tags span {
+  border: 1px solid var(--border-soft);
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.cv-button {
+  background: #1a1a1a;
+  border: 1px solid var(--border-soft);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+
+.footer-contact-extra {
+  margin-top: 18px;
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.footer-contact-extra p {
+  margin-bottom: 6px;
+}
+
+.footer-cta-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 12px 0 14px;
+}
+
+.footer-cta-btn {
+  background: #1a1a1a;
+  border: 1px solid var(--border-soft);
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  color: var(--text-main);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.footer-copy {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 6px;
+}
+
+.footer-cta-btn--primary {
+  background: var(--bg-accent);
+  border-color: var(--bg-accent);
+  color: #fff;
+}
+
+
+.footer-box {
+  background: #050505;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+  padding: 24px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+
+
+
+.contact-cta-box {
+  background: #050505;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+  padding: 24px 22px;
+  color: var(--text-main);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.contact-cta-box h3 {
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 10px;
+}
+
+.contact-cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.cta-btn {
+  background: #1a1a1a;
+  border: 1px solid var(--border-soft);
+  padding: 9px 16px;
+  border-radius: 999px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #fff;
+}
+
+.cta-btn.primary {
+  background: var(--bg-accent);
+  border-color: var(--bg-accent);
+}
+
+.footer-box-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  gap: 24px;
+}
+
+
+.footer-box {
+  max-width: 500px;
+  width: 100%;
+}
+
+
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================
+   MOBILE RESPONSIVE FIXES
+   ============================ */
+
+@media (max-width: 900px) {
+
+  /* HERO SECTION */
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .hero-right {
+    order: -1;
+  }
+  .hero-image {
+    width: 100%;
+    height: 380px;
+  }
+
+  /* GUIDE SECTION (1.2 / 0.8 split) */
+  .guide-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* CONTACT SECTION (form + side box) */
+  .contact {
+    grid-template-columns: 1fr;
+  }
+  .contact-side {
+    text-align: left;
+  }
+}
+
+@media (max-width: 800px) {
+
+  /* SERVICES GRID (3 → 1) */
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* CASE IMAGES (3 → 1) */
+  .case-images {
+    grid-template-columns: 1fr;
+  }
+
+  /* CASE CARDS (3 → 1) */
+  .case-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* CONSULTATION CARDS (3 → 1) */
+  .consultation-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+
+  /* NAVIGATION */
+  .nav-center {
+    display: none;
+  }
+  .nav {
+    padding: 12px 16px;
+  }
+
+  /* ABOUT SECTION */
+  .about-card {
+    padding: 18px;
+  }
+}
+
+@media (max-width: 700px) {
+  .nav {
+    justify-content: space-between;
+  }
+  .nav-right {
+    margin-left: auto;
+  }
+}
+
+
+@media (max-width: 700px) {
+  .nav {
+    justify-content: space-between;
+  }
+  .nav-right {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-left {
+    padding: 0 10px;
+  }
+  .hero-image {
+    height: 300px;
+  }
+}
+
+
+
+
+@media (max-width: 600px) {
+
+  /* PAGE PADDING */
+  .page {
+    padding: 16px 12px 60px;
+  }
+
+  /* MOBILE TYPOGRAPHY */
+  .hero-title {
+    font-size: 32px;
+  }
+  .services-title,
+  .consultation-header h2,
+  .guide-top h2,
+  .about-header h2 {
+    font-size: 20px;
+  }
+
+  /* FULL-WIDTH BUTTONS */
+  button,
+  .cta-btn,
+  .guide-buttons button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .services-grid {
+    gap: 18px;
+  }
+}
+@media (max-width: 600px) {
+  .case-img {
+    height: 220px;
+    border-radius: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .case-card {
+    padding: 16px;
+  }
+}
+@media (max-width: 600px) {
+  .consultation-card {
+    padding: 18px;
+  }
+}
+@media (max-width: 900px) {
+  .guide-grid {
+    row-gap: 24px;
+  }
+}
+@media (max-width: 600px) {
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="page" id="home">
+    <!-- NAV -->
+    <header class="nav">
+      <div class="nav-left">Marketing Agency Pro</div>
+      <nav class="nav-center">
+        <a href="#home" class="btn-link">HOME</a>
+        <a href="#about">ABOUT US></a>
+      </nav>
+      <div class="nav-right">
+        <a href="mailto:Diankatab@gmail.com?subject=Consultation%20Request" class="btn-link"><button>HIRE US</button></a>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-left">
+        <h1 class="hero-title slide-up">
+          Marketing that feels soft --<br />
+          and performs strong<br />
+        </h1>
+        <div class="hero-sub slide-up">
+         I'm Diana Yaropud - a data-driven marketer with 2+ years in a global company, combining consumer insights, social listening, and aesthetic content systems to help brands and personal creators grow with clarity.
+        </div>
+        <button class="hero-button slide-up">Book a Consultation</button>
+        <button class="hero-button slide-up">Buy the Guide</button>
+      </div>
+      <div class="hero-right">
+        <div class="hero-image slide-right"></div>
+      </div>
+    </section>
+
+    
+
+      <div class="services slide-up">
+        <h2 class="services-title">OUR SERVICES</h2>
+        <div class="services-grid">
+          <article class="service-card">
+            <h3>INSIGHTS FIRST</h3>
+            <p>
+              What people feel, say & save -- turned into content decisions
+            </p>
+            <a href="#">LEARN MORE</a>
+          </article>
+          <article class="service-card">
+            <h3>Brand & aesthetics</h3>
+            <p>
+              Visual storytelling, templates, carousels, and clean UI.
+            </p>
+            <a href="#">LEARN MORE</a>
+          </article>
+          <article class="service-card">
+            <h3>Calm growth</h3>
+            <p>
+              No pressure, no noise -- just clarity and systems
+            </p>
+            <a href="#">LEARN MORE</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLUEPRINT -->
+    <section class="blueprint slide-up">
+      <h2>THE STRATEGIC BLUEPRINT FOR MARKET DOMINANCE</h2>
+      <p>
+        We don’t believe in subtle results. Our approach is built on assertive digital strategies and high-impact design
+        that forces engagement. By merging disruptive creative with surgical data precision, we build growth engines that
+        don’t just reach audiences — they command them. High-density content and bold modular layout define our editorial
+        rhythm, ensuring your brand stays ahead of the curve.
+      </p>
+    </section>
+
+    <!-- CASE STUDIES HEADER + IMAGES -->
+    <section class="case-header">
+      <div class="case-header-kicker slide-up">SERVICES</div>
+      <div class="case-header-title slide-up">
+        Pick one focused offer - or combine them into a monthly plan!
+      </div>
+<div class="case-images">
+  <div class="case-img fade-up" style="background-image: url('image1.jpg');"></div>
+  <div class="case-img fade-up" style="background-image: url('image4.jpg');"></div>
+  <div class="case-img fade-up" style="background-image: url('image3.jpg');"></div>
+</div>
+
+    </section>
+
+    <!-- CASE STUDY CARDS -->
+    <section class="case-cards">
+      <div class="case-cards-grid">
+        <article class="case-card slide-up">
+          <h3>Social Listening & Consumer Insights</h3>
+          <p>
+            Understand your audience (VOC), sentiment, and trends - then translate insights into actions.
+          </p>
+          <button>VIEW CASE STUDY</button>
+        </article>
+        <article class="case-card slide-up">
+          <h3>Content Strategy for Personal Brands</h3>
+          <p>
+            A simple weekly system that makes your brand visible - without burnout
+          </p>
+          <button>VIEW CASE STUDY</button>
+        </article>
+        <article class="case-card slide-up">
+          <h3>Visual Storytelling & Launch Assets</h3>
+          <p>
+Aesthetic visuals with strategy behind them - for launches, lead magnets, and conversion.
+          </p>
+          <button>VIEW CASE STUDY</button>
+        </article>
+      </div>
+
+    </section>
+<div class="consultation slide-up">
+  <div class="consultation-header">
+    <h2>Consultation</h2>
+    <p>Choose your format — and book in 2 minutes.</p>
+  </div>
+
+  <div class="consultation-grid">
+    <div class="consult-card">
+      <div class="consult-top">
+        <h3>30-Min Strategy Reset</h3>
+        <div class="price">€49</div>
+      </div>
+      <p>Quick clarity: positioning, content direction, and 3 next steps.</p>
+      <div class="consult-buttons">
+        <a href="mailto:Diankatab@gmail.com?subject=Consultation%20Request" class="btn-link"><button class="primary">Book this</button></a>
+        <a href="https://wa.me/34610559914" class="btn-link"><button class="secondary">WhatsApp</button></a>
+        <a href="mailto:Diankatab@gmail.com?subject=Consultation%20Request" class="btn-link"><button class="secondary">Email</button></a>
+      </div>
+    </div>
+
+    <div class="consult-card">
+      <div class="consult-top">
+        <h3>60-Min Deep Dive</h3>
+        <div class="price">€89</div>
+      </div>
+      <p>A structured session: audit your profile/content and map a 2-week plan.</p>
+      <div class="consult-buttons">
+        <a href="mailto:Diankatab@gmail.com?subject=Consultation%20Request" class="btn-link"><button class="primary">Book this</button></a>
+        <a href="https://wa.me/34610559914" class="btn-link"><button class="secondary">WhatsApp</button></a>
+        <a href="mailto:Diankatab@gmail.com?subject=Consultation%20Request" class="btn-link"><button class="secondary">Email</button></a>
+      </div>
+    </div>
+
+    <div class="consult-card">
+      <div class="consult-top">
+        <h3>Monthly Growth Support</h3>
+        <div class="price">€290+</div>
+      </div>
+      <p>For creators & brands who want consistency: weekly calls + content direction.</p>
+      <div class="consult-buttons">
+        <a href="mailto:Diankatab@gmail.com?subject=Consultation%20Request" class="btn-link"><button class="primary">Book this</button></a>
+        <a href="https://wa.me/34610559914" class="btn-link"><button class="secondary">WhatsApp</button></a>
+        <a href="mailto:Diankatab@gmail.com?subject=Consultation%20Request" class="btn-link"><button class="secondary">Email</button></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MARKETING GUIDE -->
+<section class="guide slide-up">
+
+  <div class="guide-top">
+    <div>
+      <h2>Marketing Guide for Introverts</h2>
+      <p>A calm, elegant roadmap to build a personal brand that sells — without pressure.</p>
+    </div>
+    <button class="guide-preview">Download preview</button>
+  </div>
+
+  <div class="guide-grid">
+
+    <!-- LEFT -->
+    <div class="guide-card">
+      <h3>What you’ll get</h3>
+      <ul>
+        <li>7-day plan to create clarity and consistency</li>
+        <li>Positioning formula: “I help [who] get [result] with [method] — without [pain]”</li>
+        <li>Content pillars + weekly system</li>
+        <li>Soft selling & DM script ideas</li>
+        <li>Mindset + growth tracking (saves, DMs, clicks)</li>
+      </ul>
+
+      <div class="guide-buttons">
+        <button class="primary">Buy the guide</button>
+        <button class="secondary">Open full PDF</button>
+        <button class="ghost">Preview</button>
+      </div>
+
+      <p class="guide-tip">
+        Tip: If you feel “too quiet to sell”, start here. You don’t need to be loud — you need to be clear.
+      </p>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="guide-card">
+      <div class="guide-price-top">
+        <h3>Price</h3>
+        <div class="price">€29</div>
+      </div>
+
+      <p class="muted">Instant digital download (PDF).</p>
+
+      <hr />
+
+      <h4>Best for you if:</h4>
+      <ul>
+        <li>You want a simple content system</li>
+        <li>You’re building a personal brand</li>
+        <li>You want to start selling without pressure</li>
+      </ul>
+
+      <div class="guide-buttons">
+        <a href="mailto:Diankatab@gmail.com?subject=Consultation%20Request" class="btn-link"><button class="primary">Buy now</button></a>
+        <a href="https://wa.me/34610559914" class="btn-link"><button class="secondary">WhatsApp</button></a>
+      </div>
+
+      <p class="muted small">
+        After payment, I’ll send the file + bonus templates.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ABOUT ME -->
+<section class="about slide-up">
+
+  <div class="about-header" id="about">
+    <h2>About me</h2>
+    <p>Data-driven marketing, built with aesthetics and clarity.</p>
+  </div>
+
+  <div class="about-grid">
+
+    <!-- LEFT -->
+    <div class="about-card">
+      <h3>My story</h3>
+
+      <p>
+        Hi, I’m Diana — a marketing specialist working across European markets.
+        I’ve lived in three countries, worked in multiple roles, and built a
+        career that blends analysis with visual storytelling.
+      </p>
+
+      <p>
+        I started my blog because I wanted to prove one simple idea:
+        <em>you don’t need to be loud to be seen.</em>
+      </p>
+
+      <p>
+        Today, I help brands and personal creators grow with intention:
+        we use consumer insights to understand what people truly want,
+        then turn it into clear messaging, content systems,
+        and visuals that feel premium and human.
+      </p>
+
+      <div class="about-tags">
+        <span>EN • UA • ES</span>
+        <span>Barcelona</span>
+        <span>Remote EU</span>
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="about-card">
+      <h3>Background</h3>
+
+      <ul>
+        <li><strong>Nestlé Business Services</strong> — Social Media Analyst / Consumer Insights</li>
+        <li>Social listening (Talkwalker), VOC, sentiment trends, reporting</li>
+        <li>Competitive analysis across TikTok / Meta / YouTube</li>
+        <li>UX & landing page mindset (A/B-tested journeys)</li>
+        <li>Tools: Talkwalker, Pulse OMNI, Semrush, Canva, Figma</li>
+      </ul>
+
+      <button class="cv-button">Open CV (PDF)</button>
+    </div>
+
+  </div>
+</section>
+
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials slide-up">
+      <div class="testimonial-block">
+        "Diana transformed our digital presence almost overnight.  Her bold strategies were exactly what we needed"
+      </div>
+      <div class="testimonial-block">
+        "We couldn't believe how clear Diana mapped out our marketing strategy, then worked with our internal team to take the lead on executing"
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact slide-up">
+      <div>
+        <h2>Contact Us</h2>
+        <p>
+          We’d love to hear from you. Send us a message and we’ll respond as soon as possible.
+        </p>
+        <form class="contact-form">
+          <div class="field-row">
+            <div class="field-group">
+              <label for="first">First name</label>
+              <input id="first" type="text" placeholder="Enter your first name" />
+            </div>
+            <div class="field-group">
+              <label for="last">Last name</label>
+              <input id="last" type="text" placeholder="Enter your last name" />
+            </div>
+          </div>
+          <div class="field-group">
+            <label for="email">Email *</label>
+            <input id="email" type="email" placeholder="Enter your email" />
+          </div>
+          <div class="field-group">
+            <label for="topic">How can we help you? *</label>
+            <select id="topic">
+              <option>Select a topic</option>
+            </select>
+          </div>
+          <div class="field-group">
+            <label for="message">Message *</label>
+            <textarea id="message" placeholder="Tell us how we can help you"></textarea>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+ 
+
+<div class="contact-cta-box">
+  <h3>Quick CTA</h3>
+  <p>If you’re unsure what to pick — start with the 30-Min Strategy Reset. It’s the fastest clarity.</p>
+
+  <div class="contact-cta-buttons">
+    <a href="#" class="cta-btn primary">See consultation options</a>
+    <a href="#" class="cta-btn">See the guide</a>
+  </div>
+</div>
+
+
+    </section>
+
+        <!-- MARQUEE (no animation class) -->
+    <div class="marquee">
+      <div class="marquee-inner">
+        MARKETING AGENCY PRO • MARKETING AGENCY PRO • MARKETING AGENCY PRO • MARKETING AGENCY PRO •
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-top">
+
+
+<div class="footer-box footer-box-grid">
+
+
+
+  <!-- LEFT: CONTACT INFO -->
+  <div class="footer-contact-extra">
+    <div class="footer-heading">CONTACT</div>
+    <p>Email: Diankatab@gmail.com</p>
+    <p>Phone / WhatsApp: +34 610 55 99 14</p>
+    <p>Instagram: @myronivna</p>
+  </div>
+
+  <!-- RIGHT: FOLLOW ICONS -->
+  <div class="footer-follow">
+    <div class="footer-heading">FOLLOW</div>
+    <div class="footer-social">
+      <div class="social-pill">F</div>
+      <div class="social-pill">I</div>
+      <div class="social-pill">Y</div>
+      <div class="social-pill">L</div>
+      <div class="social-pill">T</div>
+    </div>
+  </div>
+
+</div>
+
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Diana Yaropud • All rights reserved.</div>
+
+        <div class="footer-links">
+          <a href="#">PRIVACY POLICY</a>
+          <a href="#">TERMS & CONDITIONS</a>
+        </div>
+      </div>
+    </footer>
+
+  </div> <!-- end .page -->
+
+  <script>
+    // HERO: image slides in from right after 1s, text/button from bottom
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        document.querySelectorAll(".hero-left .slide-up").forEach((el) => {
+          el.classList.add("visible");
+        });
+        const heroImg = document.querySelector(".hero-image");
+        if (heroImg) heroImg.classList.add("visible");
+      }, 1000);
+    });
+
+    // Scroll-based animations (only first time)
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    // IMPORTANT: marquee removed from animation list
+    document
+      .querySelectorAll(
+        ".slide-up:not(.hero-left .slide-up), .fade-up"
+      )
+      .forEach((el) => observer.observe(el));
+  </script>
+
+</body>
+</html>
+
