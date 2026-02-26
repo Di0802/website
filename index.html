@@ -513,7 +513,7 @@ textarea {
 }
 
 textarea {
-  min-height: 110px;
+  min-height: 72px;
   resize: vertical;
 }
 
@@ -730,8 +730,8 @@ textarea {
 
 .guide-price-top {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  gap: 16px;
   margin-bottom: 8px;
 }
 
@@ -1084,7 +1084,55 @@ textarea {
   }
 }
 
+.case-img {
+  position: relative;
+  cursor: pointer;
+}
 
+.case-img-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.25) 60%, transparent 100%);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px 18px;
+  opacity: 0.75;
+  transition: opacity 0.4s ease;
+}
+
+.case-img:hover .case-img-overlay {
+  opacity: 1;
+}
+
+.case-img-overlay h3 {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 6px;
+  color: #fff;
+}
+
+.case-img-overlay p {
+  font-size: 12px;
+  color: #d4d4d4;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.case-img-overlay button {
+  background: var(--bg-accent);
+  color: #fff;
+  border: none;
+  padding: 7px 14px;
+  border-radius: 999px;
+  font-size: 11px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  width: fit-content;
+}
 
 
 @media (max-width: 600px) {
@@ -1148,7 +1196,26 @@ textarea {
   }
 }
 
+.guide-thumbnails {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  flex-shrink: 0;
+}
 
+.guide-thumb {
+  width: 80px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.guide-price-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
 
   </style>
 </head>
@@ -1205,14 +1272,14 @@ textarea {
             <p>
               Visual storytelling, templates, carousels, and clean UI.
             </p>
-            <a href="#about">LEARN MORE</a>
+            <a href="#guide">LEARN MORE</a>
           </article>
           <article class="service-card">
             <h3>Calm growth</h3>
             <p>
               No pressure, no noise -- just clarity and systems
             </p>
-            <a href="#about">LEARN MORE</a>
+            <a href="#services">LEARN MORE</a>
           </article>
         </div>
       </div>
@@ -1230,44 +1297,40 @@ textarea {
     </section>
 
     <!-- CASE STUDIES HEADER + IMAGES -->
-    <section class="case-header">
-      <div class="case-header-kicker slide-up">SERVICES</div>
-      <div class="case-header-title slide-up">
-        Pick one focused offer - or combine them into a monthly plan!
-      </div>
-<div class="case-images">
-  <div class="case-img fade-up" style="background-image: url('image1.jpg');"></div>
-  <div class="case-img fade-up" style="background-image: url('image4.jpg');"></div>
-  <div class="case-img fade-up" style="background-image: url('image3.jpg');"></div>
-</div>
+    <!-- CASE STUDIES HEADER + IMAGES WITH OVERLAY -->
+<section class="case-header">
+  <div class="case-header-kicker slide-up">SERVICES</div>
+  <div class="case-header-title slide-up">
+    Pick one focused offer - or combine them into a monthly plan!
+  </div>
+  <div class="case-images">
 
-    </section>
-
-    <!-- CASE STUDY CARDS -->
-    <section class="case-cards">
-      <div class="case-cards-grid">
-        <article class="case-card slide-up">
-          <h3>Social Listening & Consumer Insights</h3>
-          <p>
-            Understand your audience (VOC), sentiment, and trends - then translate insights into actions.
-          </p>
-          <button>VIEW CASE STUDY</button>
-        </article>
-        <article class="case-card slide-up">
-          <h3>Content Strategy for Personal Brands</h3>
-          <p>
-            A simple weekly system that makes your brand visible - without burnout
-          </p>
-          <button>VIEW CASE STUDY</button>
-        </article>
-        <article class="case-card slide-up">
-          <h3>Visual Storytelling & Launch Assets</h3>
-          <p>
-Aesthetic visuals with strategy behind them - for launches, lead magnets, and conversion.
-          </p>
-          <button>VIEW CASE STUDY</button>
-        </article>
+    <div class="case-img fade-up" style="background-image: url('image1.jpg');">
+      <div class="case-img-overlay">
+        <h3>Social Listening & Consumer Insights</h3>
+        <p>Understand your audience (VOC), sentiment, and trends - then translate insights into actions.</p>
+        <button>VIEW CASE STUDY</button>
       </div>
+    </div>
+
+    <div class="case-img fade-up" style="background-image: url('image4.jpg');">
+      <div class="case-img-overlay">
+        <h3>Content Strategy for Brands</h3>
+        <p>A simple weekly system that makes your brand visible - without burnout - for personal brands.</p>
+        <button>VIEW CASE STUDY</button>
+      </div>
+    </div>
+
+    <div class="case-img fade-up" style="background-image: url('image3.jpg');">
+      <div class="case-img-overlay">
+        <h3>Visual Storytelling & Launch Assets</h3>
+        <p>Aesthetic visuals with strategy behind them - for launches, lead magnets, and conversion.</p>
+        <button>VIEW CASE STUDY</button>
+      </div>
+    </div>
+
+  </div>
+</section>
 
     </section>
 <div class="consultation slide-up" id="services">
@@ -1356,18 +1419,23 @@ Aesthetic visuals with strategy behind them - for launches, lead magnets, and co
     <!-- RIGHT -->
     <div class="guide-card">
       <div class="guide-price-top">
-        <h3>Price</h3>
-        <div class="price">€29</div>
+        <div class="guide-thumbnails">
+          <a href="marketing_guide_free.pdf"><img src="marketing_guide_free_thumbnail.jpg" alt="Free Marketing Guide" class="guide-thumb" /></a>
+          <a href="marketing_guide.pdf"><img src="marketing_guide_thumbnail.jpg" alt="Marketing Guide" class="guide-thumb" /></a>
+        </div>
+        <div class="guide-price-info">
+          <h3>Price</h3>
+          <div class="price">€29</div>
+          <p class="muted">Instant digital download (PDF).</p>
+        </div>
       </div>
-
-      <p class="muted">Instant digital download (PDF).</p>
 
       <hr />
 
       <h4>Best for you if:</h4>
       <ul>
         <li>You want a simple content system</li>
-        <li>You’re building a personal brand</li>
+        <li>You're building a personal brand</li>
         <li>You want to start selling without pressure</li>
       </ul>
 
@@ -1377,7 +1445,7 @@ Aesthetic visuals with strategy behind them - for launches, lead magnets, and co
       </div>
 
       <p class="muted small">
-        After payment, I’ll send the file + bonus templates.
+        After payment, I'll send the file + bonus templates.
       </p>
     </div>
 
@@ -1453,52 +1521,38 @@ Aesthetic visuals with strategy behind them - for launches, lead magnets, and co
       </div>
     </section>
 
-    <!-- CONTACT -->
-    <section class="contact slide-up">
-      <div>
-        <h2>Contact Us</h2>
-        <p>
-          We’d love to hear from you. Send us a message and we’ll respond as soon as possible.
-        </p>
-        <form class="contact-form">
-          <div class="field-row">
-            <div class="field-group">
-              <label for="first">First name</label>
-              <input id="first" type="text" placeholder="Enter your first name" />
-            </div>
-            <div class="field-group">
-              <label for="last">Last name</label>
-              <input id="last" type="text" placeholder="Enter your last name" />
-            </div>
-          </div>
-          <div class="field-group">
-            <label for="email">Email *</label>
-            <input id="email" type="email" placeholder="Enter your email" />
-          </div>
-          <div class="field-group">
-            <label for="topic">How can we help you? *</label>
-            <select id="topic">
-              <option>Select a topic</option>
-            </select>
-          </div>
-          <div class="field-group">
-            <label for="message">Message *</label>
-            <textarea id="message" placeholder="Tell us how we can help you"></textarea>
-          </div>
-          <button type="submit">Submit</button>
-        </form>
+   <section class="contact slide-up">
+  <div>
+    <h2>Contact Us</h2>
+    <p>We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+<form class="contact-form">
+      <div class="field-row">
+        <div class="field-group">
+          <label for="name">Full name</label>
+          <input id="name" type="text" placeholder="Your full name" />
+        </div>
+        <div class="field-group">
+          <label for="email">Email *</label>
+          <input id="email" type="email" placeholder="Your email" />
+        </div>
       </div>
- 
-
-<div class="contact-cta-box">
-  <h3>Quick CTA</h3>
-  <p>If you’re unsure what to pick — start with the 30-Min Strategy Reset. It’s the fastest clarity.</p>
-
-  <div class="contact-cta-buttons">
-    <a href="#" class="cta-btn primary">See consultation options</a>
-    <a href="#" class="cta-btn">See the guide</a>
+      <div class="field-group">
+        <label for="message">Message *</label>
+        <textarea id="message" placeholder="Tell us how we can help you"></textarea>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
   </div>
-</div>
+
+  <div class="contact-cta-box">
+    <h3>Quick CTA</h3>
+    <p>If you're unsure what to pick — start with the 30-Min Strategy Reset. It's the fastest clarity.</p>
+    <div class="contact-cta-buttons">
+      <a href="#" class="cta-btn primary">See consultation options</a>
+      <a href="#" class="cta-btn">See the guide</a>
+    </div>
+  </div>
+</section>
 
 
     </section>
