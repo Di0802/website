@@ -556,7 +556,7 @@ textarea {
 .marquee-inner {
   display: inline-block;
   padding-left: 100%;
-  animation: marquee 14s linear infinite;
+  animation: marquee 24s linear infinite;
 }
 
 @keyframes marquee {
@@ -604,11 +604,12 @@ textarea {
   display: flex;
   gap: 8px;
   margin-top: 10px;
+  flex-wrap: nowrap;
 }
 
 .social-pill {
-  width: 26px;
-  height: 26px;
+  width: 42px;
+  height: 42px;
   border-radius: 999px;
   border: 1px solid var(--border-soft);
   display: flex;
@@ -698,7 +699,7 @@ textarea {
 
 .guide-grid {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-columns: 1fr 1fr;
   gap: 24px;
 }
 
@@ -965,7 +966,7 @@ textarea {
 
 .footer-box-grid {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr minmax(220px, auto);
   align-items: start;
   gap: 24px;
 }
@@ -976,7 +977,9 @@ textarea {
   width: 100%;
 }
 
-
+[id] {
+  scroll-margin-top: 80px;
+}
 
 @media (max-width: 900px) {
   .about-grid {
@@ -1382,46 +1385,52 @@ textarea {
 </div>
 
 <!-- MARKETING GUIDE -->
-<section class="guide slide-up">
+<section class="guide slide-up" id="guide">
 
-  <div class="guide-top" id="guide">
+  <div class="guide-top">
     <div>
       <h2>Marketing Guide</h2>
       <p>A calm, elegant roadmap to build a personal brand that sells without pressure.</p>
     </div>
-    <a href="marketing_guide_free.pdf"><button class="guide-preview">Download preview</button></a>
+    <!--<a href="marketing_guide_free.pdf"><button class="guide-preview">Download preview</button></a>-->
   </div>
 
   <div class="guide-grid">
 
 <!-- LEFT -->
-    <div class="guide-card">
-      <div style="display: flex; gap: 16px; align-items: flex-start; margin-bottom: 16px;">
-        <a href="marketing_guide.pdf">
-          <img src="marketing_guide_thumbnail.jpg" alt="Free Marketing Guide" class="guide-thumb" />
-        </a>
-        <h3>What you'll get</h3>
-      </div>
-      <ul>
-        <li><b>FREE</b> marketing guide</li>
-        <li>Positioning formula: “I help [who] get [result] with [method] — without [pain]”</li>
-        <li>Content pillars + weekly system</li>
-        <li>Soft selling & DM script ideas</li>
-        <li>Mindset + growth tracking (saves, DMs, clicks)</li>
-      </ul>
-
-
-
-      <div class="guide-buttons">
-        <a href="mailto:Diankatab@gmail.com?subject=Consultation%20Request" class="btn-link"><button class="primary">Get for $0</button></a>
-        <a href="marketing_guide.pdf"><button class="secondary">Open full PDF</button></a>
-        <button class="ghost">Preview</button>
-      </div>
-
-      <p class="guide-tip">
-        Tip: If you feel “too quiet to sell”, start here. You don’t need to be loud — you need to be clear.
-      </p>
+<div class="guide-card">
+  <div class="guide-price-top">
+    <div class="guide-thumbnails">
+      <a href="marketing_guide.pdf">
+        <img src="marketing_guide_thumbnail.jpg" alt="Marketing Guide" class="guide-thumb" />
+      </a>
     </div>
+    <div class="guide-price-info">
+      <h3><i>Free</i> Marketing Guide</h3>
+      <div class="price">€0</div>
+      <p class="muted">Instant digital download (PDF).</p>
+    </div>
+  </div>
+
+  <hr />
+
+  <ul>
+    <b><li>What you'll get:</li></b>
+    <li>Positioning formula: "I help [who] get [result] with [method] — without [pain]"</li>
+    <li>Content pillars + weekly system</li>
+    <li>Soft selling & DM script ideas</li>
+    <li>Mindset + growth tracking (saves, DMs, clicks)</li>
+  </ul>
+
+  <div class="guide-buttons">
+    <a href="mailto:diana@myronivna.com?subject=Consultation%20Request" class="btn-link"><button class="primary">Get for €0</button></a>
+    <a href="marketing_guide.pdf"><button class="secondary">Open full PDF</button></a>
+  </div>
+
+  <p class="muted small">
+    Tip: If you feel "too quiet to sell", start here. You don't need to be loud — you need to be clear.
+  </p>
+</div>
 
     <!-- RIGHT -->
     <div class="guide-card">
@@ -1431,7 +1440,7 @@ textarea {
           <!--<a href="marketing_guide.pdf"><img src="marketing_guide_thumbnail.jpg" alt="Marketing Guide" class="guide-thumb" /></a>-->
         </div>
         <div class="guide-price-info">
-          <h3>Marketing Guide</h3>
+          <h3>Advanced Marketing Guide</h3>
           <div class="price">€29</div>
           <p class="muted">Instant digital download (PDF).</p>
         </div>
@@ -1444,11 +1453,12 @@ textarea {
         <li>You want a simple content system</li>
         <li>You're building a personal brand</li>
         <li>You want to start selling without pressure</li>
+        <li>You're interested in taking your marketing to the next level</li>
       </ul>
 
       <div class="guide-buttons">
         <a href="mailto:Diankatab@gmail.com?subject=Consultation%20Request" class="btn-link"><button class="primary">Buy now</button></a>
-        <a href="https://wa.me/34610559914" class="btn-link"><button class="secondary">WhatsApp</button></a>
+        <a href="marketing_guide_free.pdf"><button class="secondary">Download Preview</button></a>
       </div>
 
       <p class="muted small">
@@ -1471,7 +1481,7 @@ textarea {
   <div class="about-grid">
 
     <!-- LEFT -->
-    <div class="about-card">
+    <div class="about-card" id="about">
       <h3>My story</h3>
 
       <p>
@@ -1500,7 +1510,7 @@ textarea {
     </div>
 
     <!-- RIGHT -->
-    <div class="about-card">
+    <!--<div class="about-card">
       <h3>Background</h3>
 
       <ul>
@@ -1514,7 +1524,24 @@ textarea {
       <button class="cv-button">Open CV (PDF)</button>
     </div>
 
+  </div>-->
+  <!-- RIGHT -->
+<div class="about-card">
+  <h3>Background</h3>
+
+  <div style="display: flex; gap: 20px; align-items: center;">
+    <img src="image5.jpg" alt="Diana Yaropud" style="width: 180px; height: 220px; object-fit: cover; border-radius: 10px; flex-shrink: 0;" />
+    <ul>
+      <li><strong>Nestlé Business Services</strong> — Social Media Analyst / Consumer Insights</li>
+      <li>Social listening (Talkwalker), VOC, sentiment trends, reporting</li>
+      <li>Competitive analysis across TikTok / Meta / YouTube</li>
+      <li>UX & landing page mindset (A/B-tested journeys)</li>
+      <li>Tools: Talkwalker, Pulse OMNI, Semrush, Canva, Figma</li>
+    </ul>
   </div>
+
+  <a href="dianaCV.pdf"><button class="cv-button" style="margin-top: 20px;">Open CV (PDF)</button></a>
+</div>
 </section>
 
 
@@ -1555,7 +1582,7 @@ textarea {
     <h3>Quick CTA</h3>
     <p>If you're unsure what to pick — start with the 30-Min Strategy Reset. It's the fastest clarity.</p>
     <div class="contact-cta-buttons">
-      <a href="#" class="cta-btn primary">See consultation options</a>
+      <a href="#services" class="cta-btn primary">See consultation options</a>
       <a href="#" class="cta-btn">See the guide</a>
     </div>
   </div>
@@ -1577,21 +1604,20 @@ textarea {
   <!-- LEFT: CONTACT INFO -->
   <div class="footer-contact-extra">
     <div class="footer-heading">CONTACT</div>
-    <p>Email: Diankatab@gmail.com</p>
-    <p>Phone / WhatsApp: +34 610 55 99 14</p>
-    <p>Instagram: @myronivna</p>
+    <a href="mailto:diankatab@gmail.com"><p>Email: Diankatab@gmail.com</p></a>
+    <p style="white-space: nowrap;">Phone / WhatsApp: +34 610 55 99 14</p>
   </div>
 
   <!-- RIGHT: FOLLOW ICONS -->
   <div class="footer-follow">
     <div class="footer-heading">FOLLOW</div>
-    <div class="footer-social">
-      <div class="social-pill">F</div>
-      <div class="social-pill">I</div>
-      <div class="social-pill">Y</div>
-      <div class="social-pill">L</div>
-      <div class="social-pill">T</div>
-    </div>
+<div class="footer-social">
+  <a href="https://www.facebook.com/diana.yaropud.3"><div class="social-pill"><img src="icons/facebook.png" alt="Facebook" style="width: 26px; height: 26px; object-fit: contain;" /></div></a>
+  <a href="https://www.instagram.com/myronivna/?hl=en"><div class="social-pill"><img src="icons/instagram.png" alt="Instagram" style="width: 26px; height: 26px; object-fit: contain;" /></div></a>
+  <a href="https://www.linkedin.com/in/diana-yaropud-b73344218/"><div class="social-pill"><img src="icons/linkedin.png" alt="LinkedIn" style="width: 26px; height: 26px; object-fit: contain;" /></div></a>
+  <div class="social-pill"><img src="icons/twitter.png" alt="Twitter" style="width: 26px; height: 26px; object-fit: contain;" /></div>
+  <div class="social-pill"><img src="icons/yahoo.png" alt="Yahoo" style="width: 26px; height: 26px; object-fit: contain;" /></div>
+</div>
   </div>
 
 </div>
@@ -1602,17 +1628,17 @@ textarea {
       <div class="footer-bottom">
         <div>© 2026 Diana Yaropud • All rights reserved.</div>
 
-        <div class="footer-links">
+        <!--<div class="footer-links">
           <a href="#">PRIVACY POLICY</a>
           <a href="#">TERMS & CONDITIONS</a>
-        </div>
+        </div>-->
       </div>
     </footer>
 
         <!-- MARQUEE (no animation class) -->
     <div class="marquee">
       <div class="marquee-inner">
-        MYRONIVNA AGENCY • MYRONIVNA AGENCY • MYRONIVNA AGENCY • MYRONIVNA AGENCY •
+        <B>MYRONIVNA AGENCY</B> • Consumer Insights • <B>MYRONIVNA AGENCY</B> • Visual Storytelling • <B>MYRONIVNA AGENCY</B> • Insights • <B>MYRONIVNA AGENCY</B> • Strategy • <B>MYRONIVNA AGENCY</B> • Social Listening • <B>MYRONIVNA AGENCY</B> • Content Strategy • <B>MYRONIVNA AGENCY</B> • Brand & Aesthetics • <B>MYRONIVNA AGENCY</B> • Book a Consultation •
       </div>
     </div>
 
