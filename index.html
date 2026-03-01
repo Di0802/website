@@ -1532,20 +1532,20 @@ textarea {
   <div>
     <h2>Contact Us</h2>
     <p>We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
-<form class="contact-form">
+<form class="contact-form" action="https://formspree.io/f/mvzbndqj" method="POST">
       <div class="field-row">
         <div class="field-group">
           <label for="name">Full name</label>
-          <input id="name" type="text" placeholder="Your full name" />
+          <input id="name" name="name" type="text" placeholder="Your full name" />
         </div>
         <div class="field-group">
           <label for="email">Email *</label>
-          <input id="email" type="email" placeholder="Your email" />
+          <input id="email" name="email" type="email" placeholder="Your email" />
         </div>
       </div>
       <div class="field-group">
         <label for="message">Message *</label>
-        <textarea id="message" placeholder="Tell us how we can help you"></textarea>
+        <textarea id="message" name="message" placeholder="Tell us how we can help you"></textarea>
       </div>
       <button type="submit">Submit</button>
     </form>
