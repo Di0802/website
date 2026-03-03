@@ -462,14 +462,16 @@ a {
   border-radius: var(--radius);
   padding: 26px 22px;
   border: 1px solid var(--border-soft);
-  display: grid;
+  display: block;
   grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
   gap: 32px;
   align-items: flex-start;
 }
 
 .contact h2 {
-  font-size: 20px;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
   margin-bottom: 6px;
 }
 
@@ -521,7 +523,7 @@ textarea {
   background: var(--bg-accent);
   color: #ffffff;
   border: none;
-  padding: 9px 20px;
+  padding: 14px 20px;
   border-radius: 999px;
   font-size: 12px;
   cursor: pointer;
@@ -915,7 +917,7 @@ textarea {
   background: #050505;
   border: 1px solid var(--border-soft);
   border-radius: var(--radius);
-  padding: 24px 22px;
+  padding: 16px 18px;
   display: flex;
   flex-direction: column;
   gap: 18px;
@@ -951,7 +953,7 @@ textarea {
 .cta-btn {
   background: #1a1a1a;
   border: 1px solid var(--border-soft);
-  padding: 9px 16px;
+  padding: 14px 16px;
   border-radius: 999px;
   font-size: 12px;
   text-transform: uppercase;
@@ -973,7 +975,7 @@ textarea {
 
 
 .footer-box {
-  max-width: 500px;
+  max-width: 280px;
   width: 100%;
 }
 
@@ -1266,7 +1268,7 @@ textarea {
           <article class="service-card">
             <h3>INSIGHTS FIRST</h3>
             <p>
-              What people feel, say & save -- turned into content decisions
+              What people feel, say & save - turned into content decisions
             </p>
             <a href="#about">LEARN MORE</a>
           </article>
@@ -1280,7 +1282,7 @@ textarea {
           <article class="service-card">
             <h3>Calm growth</h3>
             <p>
-              No pressure, no noise -- just clarity and systems
+              No pressure, no noise - just clarity and systems
             </p>
             <a href="#services">LEARN MORE</a>
           </article>
@@ -1555,38 +1557,66 @@ textarea {
       </div>
     </section>
 
-   <section class="contact slide-up">
-  <div>
-    <h2>Contact Us</h2>
-    <p>We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
-<form class="contact-form" action="https://formspree.io/f/mvzbndqj" method="POST">
-      <div class="field-row">
-        <div class="field-group">
-          <label for="name">Full name</label>
-          <input id="name" name="name" type="text" placeholder="Your full name" />
-        </div>
-        <div class="field-group">
-          <label for="email">Email *</label>
-          <input id="email" name="email" type="email" placeholder="Your email" />
-        </div>
-      </div>
-      <div class="field-group">
-        <label for="message">Message *</label>
-        <textarea id="message" name="message" placeholder="Tell us how we can help you"></textarea>
-      </div>
-      <button type="submit">Submit</button>
-    </form>
-  </div>
+<div style="display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr); gap: 24px; margin-top: 60px;">
 
-  <div class="contact-cta-box">
+  <!-- CONTACT FORM BOX -->
+  <section class="contact slide-up" style="margin-top: 0;">
+    <div>
+      <h2>Contact Us</h2>
+      <p>We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+      <form class="contact-form" action="https://formspree.io/f/mvzbndqj" method="POST">
+        <div class="field-row">
+          <div class="field-group">
+            <label for="name">Full name</label>
+            <input id="name" name="name" type="text" placeholder="Your full name" />
+          </div>
+          <div class="field-group">
+            <label for="email">Email *</label>
+            <input id="email" name="email" type="email" placeholder="Your email" />
+          </div>
+        </div>
+        <div class="field-group">
+          <label for="message">Message *</label>
+          <textarea id="message" name="message" placeholder="Tell us how we can help you"></textarea>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- QUICK CTA BOX -->
+  <div class="contact-cta-box slide-up" style="margin-top: 0; display: flex; flex-direction: column;">
     <h3>Quick CTA</h3>
     <p>If you're unsure what to pick — start with the 30-Min Strategy Reset. It's the fastest clarity.</p>
-    <div class="contact-cta-buttons">
-      <a href="#services" class="cta-btn primary">See consultation options</a>
-      <a href="#" class="cta-btn">See the guide</a>
+    <div class="footer-heading" style="margin-top: 16px;">FOLLOW</div>
+    <div class="footer-social" style="margin-top: 8px; margin-bottom: 16px;">
+      <a href="https://www.facebook.com/diana.yaropud.3"><div class="social-pill"><img src="icons/facebook.png" alt="Facebook" style="width: 26px; height: 26px; object-fit: contain;" /></div></a>
+      <a href="https://www.instagram.com/myronivna/?hl=en"><div class="social-pill"><img src="icons/instagram.png" alt="Instagram" style="width: 26px; height: 26px; object-fit: contain;" /></div></a>
+      <a href="https://www.linkedin.com/in/diana-yaropud-b73344218/"><div class="social-pill"><img src="icons/linkedin.png" alt="LinkedIn" style="width: 26px; height: 26px; object-fit: contain;" /></div></a>
+      <div class="social-pill"><img src="icons/twitter.png" alt="Twitter" style="width: 26px; height: 26px; object-fit: contain;" /></div>
+      <div class="social-pill"><img src="icons/yahoo.png" alt="Yahoo" style="width: 26px; height: 26px; object-fit: contain;" /></div>
     </div>
+<div style="display: flex; gap: 10px; margin-top: auto;">
+  <a href="#services" class="cta-btn primary" style="flex: 1; text-align: center; padding: 14px 8px; font-size: 11px;">See consultation options</a>
+  <a href="#guide" class="cta-btn" style="flex: 1; text-align: center; padding: 14px 8px; font-size: 11px;">See the guide</a>
+</div>
+
+
+<!--<div style="display: flex; gap: 10px; margin-top: auto;">
+  <a href="#services" class="cta-btn primary" style="flex: 1; text-align: center; padding: 14px 8px; font-size: 11px;">See consultation options</a>
+  <a href="#guide" class="cta-btn" style="flex: 1; text-align: center; padding: 14px 8px; font-size: 11px;">See the guide</a>
+</div>
+<div class="footer-heading" style="margin-top: 16px;">FOLLOW</div>
+<div class="footer-social" style="margin-top: 8px;">
+  <a href="https://www.facebook.com/diana.yaropud.3"><div class="social-pill"><img src="icons/facebook.png" alt="Facebook" style="width: 26px; height: 26px; object-fit: contain;" /></div></a>
+  <a href="https://www.instagram.com/myronivna/?hl=en"><div class="social-pill"><img src="icons/instagram.png" alt="Instagram" style="width: 26px; height: 26px; object-fit: contain;" /></div></a>
+  <a href="https://www.linkedin.com/in/diana-yaropud-b73344218/"><div class="social-pill"><img src="icons/linkedin.png" alt="LinkedIn" style="width: 26px; height: 26px; object-fit: contain;" /></div></a>
+  <div class="social-pill"><img src="icons/twitter.png" alt="Twitter" style="width: 26px; height: 26px; object-fit: contain;" /></div>
+  <div class="social-pill"><img src="icons/yahoo.png" alt="Yahoo" style="width: 26px; height: 26px; object-fit: contain;" /></div>
+</div>-->
   </div>
-</section>
+
+</div>
 
 
     </section>
@@ -1597,29 +1627,12 @@ textarea {
       <div class="footer-top">
 
 
-<div class="footer-box footer-box-grid">
-
-
-
-  <!-- LEFT: CONTACT INFO -->
+<div class="footer-box">
   <div class="footer-contact-extra">
     <div class="footer-heading">CONTACT</div>
-    <a href="mailto:diankatab@gmail.com"><p>Email: Diankatab@gmail.com</p></a>
+    <a href="mailto:Diankatab@gmail.com"><p>Email: Diankatab@gmail.com</p></a>
     <p style="white-space: nowrap;">Phone / WhatsApp: +34 610 55 99 14</p>
   </div>
-
-  <!-- RIGHT: FOLLOW ICONS -->
-  <div class="footer-follow">
-    <div class="footer-heading">FOLLOW</div>
-<div class="footer-social">
-  <a href="https://www.facebook.com/diana.yaropud.3"><div class="social-pill"><img src="icons/facebook.png" alt="Facebook" style="width: 26px; height: 26px; object-fit: contain;" /></div></a>
-  <a href="https://www.instagram.com/myronivna/?hl=en"><div class="social-pill"><img src="icons/instagram.png" alt="Instagram" style="width: 26px; height: 26px; object-fit: contain;" /></div></a>
-  <a href="https://www.linkedin.com/in/diana-yaropud-b73344218/"><div class="social-pill"><img src="icons/linkedin.png" alt="LinkedIn" style="width: 26px; height: 26px; object-fit: contain;" /></div></a>
-  <div class="social-pill"><img src="icons/twitter.png" alt="Twitter" style="width: 26px; height: 26px; object-fit: contain;" /></div>
-  <div class="social-pill"><img src="icons/yahoo.png" alt="Yahoo" style="width: 26px; height: 26px; object-fit: contain;" /></div>
-</div>
-  </div>
-
 </div>
 
 
